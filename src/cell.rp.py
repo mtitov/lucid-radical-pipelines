@@ -18,8 +18,9 @@ WORK_DIR = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_DESCRIPTION = {
     'resource': 'anl.polaris',
     'project': 'NNNNN',  # 'FoundEpidem'
+    'queue': 'preemptable',
     'nodes': 1,
-    'runtime': 60
+    'runtime': 60  # in minutes (== walltime)
 }
 
 TASK_PRE_EXEC_ENV = [
