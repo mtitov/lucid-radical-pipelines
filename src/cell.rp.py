@@ -112,9 +112,9 @@ class Pipeline:
 
         if next_stage_id == 2:
             # this is done once when switched from Stage 1 to 2
-            self.num_images = ru.sh_callout(
+            self.num_images = int(ru.sh_callout(
                 f'head -n 1 {self.pipeline_dir}/fib_rad_num_images.txt',
-                shell=True)[0]
+                shell=True)[0])
 
         elif next_stage_id == 3:
             self.image_name = ru.sh_callout(
